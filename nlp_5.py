@@ -12,3 +12,4 @@ for entity in document.ents:
 #similarity detection
 #we use this for plagiarism 
 
+
