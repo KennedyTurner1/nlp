@@ -1,6 +1,6 @@
-import nltk
+import ntlk
 #nltk.download("stopwords") just have to download once
-from nltk.corpus import stopwords
+from ntlk.corpus import stopwords
 from textblob import TextBlob
 from pathlib import Path
 from textblob import TextBlob
@@ -18,15 +18,15 @@ stops = stopwords.words("english")
 
 items = blob.word_counts.items()
 
-#print(items) #collection of tuples, every word and their count
+print(items) #collection of tuples, every word and their count
 
-items = [word for word in items if word[0] not in stops]
+items = [word for word in items if word[0] not in stops] #for element in dictionary (items), if the key (word[0]) isn;t in stop words, add the word
 
 #print(items)
 
 from operator import itemgetter #pick which key to sort 
 
-sorted_items = sorted(items, key=itemgetter(1), reverse=True)
+sorted_items = sorted(items, key=itemgetter(1), reverse=True) #sort by the value, 1
 
 #print(sorted_items)
 
